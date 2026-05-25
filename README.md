@@ -32,6 +32,41 @@ The 5-step image processing pipeline:
 * **Custom GUI:** A user-friendly interface built with `CustomTkinter` displaying real-time tracking, dual-screen validation (Original vs. Mask), and clear PASS/WARNING/FAIL indications.
 * **Standalone Operation:** Includes modes for both Live Inspection (motor synchronization) and static File Analysis for debugging.
 
+## Repository Structure
+Below is the organizational map of the project files and directories:
+
+```text
+AOI-Medical-Inspection-System/
+│
+├── gui_app.py              # Main GUI application and primary execution logic (Run this file)
+├── main.py                 # Secondary/Backend execution script
+├── requirements.txt        # Required external Python libraries
+├── README.md               # Project documentation and overview
+│
+├── vision/                 # Computer vision and image processing modules
+│   ├── morphology.py       # Morphological filtering and noise reduction operations
+│   ├── yellow_check.py     # Color segmentation and defect identification logic
+│   └── infoo.txt
+│
+├── hardware/               # Hardware control and interface modules
+│   ├── motor.py            # Stepper motor and TB6600 driver control logic
+│   ├── camera.py           # RPi HQ Camera interface and capture settings
+│   ├── buzzer.py           # ULN2003 buzzer control for audio alerts
+│   └── info.txt
+│
+├── dev_tools/              # Standalone utility scripts and development tools
+│   ├── New_Take_a_pic_for_HQ_Camera_for_Checking.py # Independent camera testing script
+│   ├── YELLOW_CHECK_with_color_find.py              # Color threshold calibration tool
+│   ├── test_skeleton.py                             # Skeleton analysis testing (topology)
+│   └── ...                                          # Additional ROI and debugging scripts
+│
+└── assets/                 # Visual and technical reference materials
+    └── Diagrams/           
+        ├── Block_Diagram.png        # System architecture and data flow
+        ├── Electronic_schema.png    # Hardware wiring and power distribution
+        ├── CV_flowchart.png         # Computer Vision algorithmic pipeline
+        └── system_flowchart.png     # General system logic and Fail-Fast mechanism
+
 ## How to Run
 1. Clone this repository.
 2. Install the required dependencies:
