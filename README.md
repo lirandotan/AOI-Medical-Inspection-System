@@ -66,7 +66,7 @@ AOI-Medical-Inspection-System/
         ├── Electronic_schema.png    # Hardware wiring and power distribution
         ├── CV_flowchart.png         # Computer Vision algorithmic pipeline
         └── system_flowchart.png     # General system logic and Fail-Fast mechanism
-
+```
 ## How to Run
 1. Clone this repository.
 2. Install the required dependencies:
