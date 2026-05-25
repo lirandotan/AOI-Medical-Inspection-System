@@ -1,5 +1,4 @@
-customtkinter
-threading
-gpiozero
 opencv-python
 numpy
+customtkinter
+gpiozero
